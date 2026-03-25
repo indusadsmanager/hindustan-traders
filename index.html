@@ -27,64 +27,82 @@ fbq('init','1782983282489250');
 fbq('track','PageView');
 </script>
 
-<noscript>
-<img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1782983282489250&ev=PageView&noscript=1"/>
-</noscript>
-
 <style>
 body{
   margin:0;
   font-family:'Poppins',sans-serif;
-  background:radial-gradient(circle at top,#1a1f4a,#050816 70%);
+  background:radial-gradient(circle at top,#0f1226,#02040f 80%);
   color:#fff;
 }
 
-/* MAIN CARD */
+/* CONTAINER */
 .container{
   max-width:420px;
   margin:auto;
   padding:30px 20px;
 }
+
+/* CARD */
 .card{
-  background:linear-gradient(180deg,#121737,#070b1f);
+  background:linear-gradient(180deg,#0c1028,#050816);
   border-radius:30px;
   padding:40px 25px;
   text-align:center;
   box-shadow:
-    0 30px 80px rgba(0,0,0,0.9),
-    0 0 60px rgba(255,215,0,0.15);
+    0 30px 100px rgba(0,0,0,0.9),
+    0 0 80px rgba(255,215,0,0.2);
   border:1px solid rgba(255,215,0,0.2);
+  animation:fadeIn 1s ease;
 }
 
-/* LOGO */
+@keyframes fadeIn{
+  from{opacity:0;transform:translateY(20px);}
+  to{opacity:1;transform:translateY(0);}
+}
+
+/* LOGO FIXED */
 .logo{
   width:120px;
   height:120px;
   border-radius:50%;
-  border:4px solid #fff;
+  object-fit:cover;
+  display:block;
+  margin:0 auto 20px auto;
+  border:3px solid rgba(255,255,255,0.9);
   box-shadow:
-    0 0 40px rgba(255,215,0,0.9),
-    0 0 80px rgba(255,200,0,0.4);
-  margin-bottom:20px;
+    0 0 25px rgba(255,215,0,0.9),
+    0 0 60px rgba(255,215,0,0.5),
+    0 0 120px rgba(255,215,0,0.3),
+    inset 0 0 20px rgba(255,255,255,0.2);
 }
 
 /* TEXT */
 h1{
   font-size:28px;
   font-weight:800;
-  margin-bottom:8px;
-  letter-spacing:1px;
 }
 .tag{
   font-size:14px;
-  color:#dcdfff;
-  margin-bottom:20px;
+  color:#cfd3ff;
+  margin-bottom:10px;
 }
 .trust{
   font-size:13px;
   color:#ffd700;
-  margin-bottom:20px;
+  margin-bottom:15px;
+}
+
+/* TRUST BOX */
+.trustbox{
+  background:rgba(255,255,255,0.05);
+  border-radius:15px;
+  padding:15px;
+  margin:15px 0;
+  font-size:13px;
+  text-align:left;
+}
+.trustbox div{
+  margin:6px 0;
 }
 
 /* CTA */
@@ -103,7 +121,7 @@ h1{
   transition:.3s;
 }
 .cta:hover{
-  transform:scale(1.05);
+  transform:scale(1.07);
 }
 
 /* FEATURES */
@@ -115,19 +133,24 @@ h1{
   margin:12px 0;
   font-size:14px;
 }
+.features i{
+  color:#ffd700;
+  margin-right:8px;
+}
 
-/* BADGE */
-.badge{
-  margin-top:18px;
+/* TESTIMONIAL */
+.testimonial{
+  margin-top:20px;
   font-size:13px;
-  color:#aaa;
+  color:#ddd;
+  font-style:italic;
 }
 
 /* LIVE */
 #liveActivity{
   margin-top:15px;
   font-size:13px;
-  color:#ffd700;
+  color:#00ffcc;
 }
 
 /* DISCLAIMER */
@@ -144,31 +167,43 @@ h1{
 <div class="container">
   <div class="card">
 
-    <!-- LOGO -->
-    <img src="https://uploads.onecompiler.io/447v8k97f/44agms2de/WhatsApp%20Image%202025-12-29%20at%2018.24.42.jpeg" class="logo">
+    <!-- LOGO (FIXED + FALLBACK) -->
+    <img src="https://res.cloudinary.com/dqhbtoh8u/image/upload/v1774449836/WhatsApp_Image_2025-12-29_at_18.24.42_mklank.jpg"
+         class="logo"
+         alt="logo"
+         onerror="this.src='https://i.imgur.com/2DhmtJ4.png';">
 
-    <!-- NAME -->
     <h1>ગુજરાતી ટ્રેડર</h1>
     <div class="tag">Options Learning • Smart Trading</div>
 
-    <div class="trust">✔ No tips ✔ No fake promises ✔ Only learning</div>
+    <div class="trust">✔ 100% Learning Based ✔ No Fake Promises ✔ Trusted by Traders</div>
+
+    <!-- TRUST -->
+    <div class="trustbox">
+      <div>✔ 5000+ Traders Connected</div>
+      <div>✔ Daily Market Analysis</div>
+      <div>✔ Beginner Friendly Content</div>
+      <div>✔ Risk Management Focus</div>
+    </div>
 
     <!-- CTA -->
     <a href="https://t.me/+r-G9PAYNYT8wZDJl" target="_blank" class="cta" id="joinBtn">
-      🚀 JOIN FREE TELEGRAM
+      <i class="fa-brands fa-telegram"></i> JOIN FREE TELEGRAM
     </a>
 
     <!-- FEATURES -->
     <div class="features">
-      <div>📊 Nifty • BankNifty Analysis</div>
-      <div>🎯 Entry • Target • Stoploss System</div>
-      <div>🛡 Risk Management Focus</div>
-      <div>📚 Beginner Friendly Learning</div>
+      <div><i class="fa-solid fa-chart-line"></i> Nifty • BankNifty Analysis</div>
+      <div><i class="fa-solid fa-bullseye"></i> Entry • Target • Stoploss</div>
+      <div><i class="fa-solid fa-shield-halved"></i> Risk Management System</div>
+      <div><i class="fa-solid fa-book-open"></i> Beginner to Advanced Learning</div>
     </div>
 
-    <div class="badge">🟢 Active daily during market hours</div>
+    <!-- TESTIMONIAL -->
+    <div class="testimonial">
+      ⭐ "Best Gujarati trading community for learning discipline & strategy"
+    </div>
 
-    <!-- LIVE ACTIVITY -->
     <div id="liveActivity">🟢 Loading activity...</div>
 
     <div class="disclaimer">
@@ -178,29 +213,34 @@ h1{
   </div>
 </div>
 
-<!-- TRACKING -->
+<!-- ONE TIME TRACKING -->
 <script>
 const LEAD_KEY = "telegram_lead_tracked";
+const btn = document.getElementById('joinBtn');
 
-document.getElementById('joinBtn').addEventListener('click', function(){
-    if(!localStorage.getItem(LEAD_KEY)){
-        fbq('track','Lead');
-        fbq('trackCustom','TelegramJoin',{
-            source:'Landing Page',
-            platform:'Telegram'
-        });
-        localStorage.setItem(LEAD_KEY, "true");
-    }
+btn.addEventListener('click', function () {
+
+    if (localStorage.getItem(LEAD_KEY) === "true") return;
+
+    // disable spam click UX
+    btn.style.pointerEvents = "none";
+    btn.innerText = "Joining...";
+
+    fbq('track', 'Lead');
+    fbq('trackCustom', 'TelegramJoin', {
+        source: 'Landing Page',
+        platform: 'Telegram'
+    });
+
+    localStorage.setItem(LEAD_KEY, "true");
 });
 </script>
 
-<!-- LIVE NAMES -->
+<!-- LIVE ACTIVITY -->
 <script>
 const names = [
 "Amit Patel","Rahul Sharma","Vikram Singh","Rohit Mehta","Karan Gupta",
-"Suresh Yadav","Deepak Kumar","Manish Patel","Arjun Singh","Nitin Sharma",
-"Ravi Gupta","Pankaj Yadav","Aakash Verma","Neeraj Singh","Tarun Jain",
-"Vikas Patel","Mohit Sharma","Ajay Kumar","Rakesh Singh","Dinesh Yadav"
+"Suresh Yadav","Deepak Kumar","Manish Patel","Arjun Singh","Nitin Sharma"
 ];
 
 function showActivity(){
