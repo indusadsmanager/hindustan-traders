@@ -1,225 +1,166 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="gu">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gujarati Trader</title>
 
-<!-- FONT AWESOME -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
-<!-- META PIXEL -->
+<!-- 🔥 META PIXEL -->
 <script>
-!function(f,b,e,v,n,t,s){
-if(f.fbq)return;
-n=f.fbq=function(){n.callMethod?
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
 if(!f._fbq)f._fbq=n;
 n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];
-t=b.createElement(e);t.async=!0;
-t.src=v;
-s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)
-}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}
+(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
 
 fbq('init', '1782983282489250');
-</script>
 
-<noscript>
-<img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1782983282489250&ev=PageView&noscript=1"/>
-</noscript>
+// ✅ EVENTS
+fbq('track', 'PageView');
+fbq('track', 'ViewContent');
+</script>
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 
 body{
   font-family:'Poppins',sans-serif;
-  background:#000;
+  background: radial-gradient(circle at top,#0c1a3a,#000);
   color:#fff;
   text-align:center;
 }
 
-/* HERO */
 .hero{
-  padding:40px 20px 30px;
+  padding:40px 20px;
+  border:2px solid rgba(255,215,0,0.4);
+  border-radius:20px;
+  margin:20px;
+  box-shadow:0 0 40px rgba(255,215,0,0.2);
 }
 
-/* LOGO */
-.hero img{
-  width:130px;
-  height:130px;
-  border-radius:50%;
-  object-fit:cover;
-  border:3px solid rgba(255,255,255,0.2);
-  box-shadow:
-    0 0 20px rgba(255,215,0,0.8),
-    0 0 40px rgba(0,198,255,0.4);
-  margin-bottom:16px;
+.logo{
+  width:120px;height:120px;border-radius:50%;
+  margin:auto;overflow:hidden;border:2px solid #FFD700;
 }
 
-/* NAME */
-.trader-name{
-  font-size:26px;
-  font-weight:800;
-  margin-bottom:14px;
-  background:linear-gradient(90deg,#00c6ff,#8e2de2,#ff0080);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-}
+.logo img{width:100%;height:100%;object-fit:cover;}
 
-/* CTA */
-.cta{
-  display:inline-block;
-  width:100%;
-  max-width:360px;
-  padding:16px;
-  margin:0 auto 22px;
-  font-size:17px;
-  font-weight:800;
-  border-radius:50px;
-  background:linear-gradient(90deg,#ff0080,#8e2de2,#00c6ff);
-  color:#fff;
-  text-decoration:none;
-  box-shadow:0 10px 30px rgba(0,0,0,.7);
-  transition:.2s ease;
-}
-.cta:hover{
-  transform:scale(1.03);
-  box-shadow:0 0 30px rgba(0,198,255,.9);
-}
-
-/* TITLE */
-.hero h1{
+h1{
+  margin-top:20px;
   font-size:30px;
   font-weight:800;
-  margin-bottom:8px;
+  display:flex;
+  justify-content:center;
+  gap:10px;
 }
 
-.hero p{
-  font-size:15px;
-  color:#ccc;
+.crown{color:#FFD700;animation:float 1.5s infinite;}
+@keyframes float{
+  50%{transform:translateY(-6px);}
 }
 
-/* INFO */
-.info{
-  padding:28px 20px;
+.subtitle{color:#ccc;margin-top:8px;font-size:14px;}
+.highlight{color:#FFD700;margin-top:12px;font-weight:600;}
+
+.warning{color:#ff4d4d;font-size:13px;margin-top:8px;}
+
+.cta{
+  margin:25px auto;
+  display:block;
+  max-width:320px;
+  padding:18px;
+  border-radius:50px;
+  background: linear-gradient(#FFD700,#ffb300);
+  color:#000;
+  font-weight:800;
+  font-size:18px;
+  text-decoration:none;
+  animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+  70%{box-shadow:0 0 0 20px rgba(255,200,0,0);}
 }
 
 .card{
-  background:linear-gradient(180deg,#0f1629,#05070d);
-  border-radius:22px;
-  padding:22px;
-  box-shadow:0 0 30px rgba(0,255,255,.12);
-}
-
-.point{
+  background:rgba(255,255,255,0.05);
+  margin:10px auto;
+  max-width:340px;
+  padding:15px;
+  border-radius:15px;
   display:flex;
-  gap:14px;
-  align-items:center;
-  margin:14px 0;
+  gap:10px;
 }
 
-.point i{
-  font-size:18px;
-  color:#00c6ff;
-}
+.card i{color:#FFD700;}
 
-.point span{
-  font-size:15px;
-  text-align:left;
-}
-
-/* FOOTER */
 .footer{
-  padding:20px 10px;
-  font-size:13px;
-  color:#aaa;
+  font-size:11px;color:#888;margin-top:20px;
 }
 </style>
 </head>
 
 <body>
 
-<section class="hero">
+<div class="hero">
 
-  <img src="https://uploads.onecompiler.io/446vwj75z/448zrd6vz/WhatsApp%20Image%202025-12-29%20at%2018.24.42.jpeg"
-       alt="Gujarati Trader Logo">
-
-  <div class="trader-name">
-    💎 ગુજરાતી 𝐓𝐑𝐀𝐃𝐄𝐑 💎
-  </div>
-
-  <!-- TELEGRAM JOIN BUTTON -->
-  <a href="https://t.me/+r-G9PAYNYT8wZDJl"
-     target="_blank"
-     class="cta subscribe-btn">
-    <i class="fab fa-telegram-plane"></i> 𝐉𝐎𝐈𝐍 𝐎𝐔𝐑 𝐓𝐄𝐋𝐄𝐆𝐑𝐀𝐌
-  </a>
-
-  <h1>India’s Most Trusted Stock Market Community</h1>
-  <p>Free Signals • Daily Analysis • Smart Risk Management</p>
-
-</section>
-
-<section class="info">
-  <div class="card">
-
-    <div class="point">
-      <i class="fa-solid fa-chart-line"></i>
-      <span>Intraday, Options, NIFTY & BANKNIFTY Calls</span>
-    </div>
-
-    <div class="point">
-      <i class="fa-solid fa-bullseye"></i>
-      <span>Accurate Entry, Exit & Target Levels</span>
-    </div>
-
-    <div class="point">
-      <i class="fa-solid fa-shield"></i>
-      <span>Risk Management Focused Strategy</span>
-    </div>
-
-    <div class="point">
-      <i class="fa-solid fa-fire"></i>
-      <span>Daily Free & Premium Market Analysis</span>
-    </div>
-
-  </div>
-</section>
-
-<div class="footer">
-  © 2026 Gujarati Trader • All Rights Reserved
+<div class="logo">
+<img src="https://uploads.onecompiler.io/447v8k97f/44agms2de/WhatsApp%20Image%202025-12-29%20at%2018.24.42.jpeg">
 </div>
 
-<!-- TRACKING SCRIPT -->
+<h1>
+<i class="fa-solid fa-crown crown"></i>
+ગુજરાતી Trader
+<i class="fa-solid fa-crown crown"></i>
+</h1>
+
+<div class="subtitle">Private • High Accuracy • Risk Managed Trades</div>
+<div class="highlight">20,000+ Active Traders</div>
+<div class="warning">⚠️ Limited Seats • Hurry Up</div>
+
+<!-- 🔥 CTA -->
+<a href="#"
+class="cta"
+onclick="handleJoinClick()">
+🚀 JOIN FREE VIP TELEGRAM
+</a>
+
+<div class="card"><i class="fa-solid fa-chart-line"></i><span>Nifty • BankNifty • Options</span></div>
+<div class="card"><i class="fa-solid fa-bullseye"></i><span>Entry • Target • SL</span></div>
+<div class="card"><i class="fa-solid fa-shield"></i><span>Risk Management</span></div>
+
+<div class="footer">
+⚠️ Trading involves risk
+</div>
+
+</div>
+
+<!-- 🔥 BEST TRACKING SCRIPT -->
 <script>
-const PAGEVIEW_KEY = "gt_pageview_tracked";
-const SUBSCRIBE_KEY = "gt_subscribe_tracked";
+let clicked = false;
 
-/* PAGE VIEW - ONLY ONCE */
-if (!localStorage.getItem(PAGEVIEW_KEY)) {
-    fbq('track', 'PageView');
-    localStorage.setItem(PAGEVIEW_KEY, "true");
-    console.log("✅ PageView tracked");
+function handleJoinClick(){
+
+  if(clicked) return;
+  clicked = true;
+
+  // ✅ Track Events
+  fbq('track', 'Lead');
+  fbq('trackCustom', 'TelegramJoinClick');
+
+  // ✅ Delay redirect (IMPORTANT)
+  setTimeout(function(){
+    window.location.href = "https://t.me/+r-G9PAYNYT8wZDJl";
+  }, 600);
 }
-
-/* TELEGRAM JOIN - ONLY ONCE */
-document.querySelector(".subscribe-btn").addEventListener("click", function () {
-
-    if (!localStorage.getItem(SUBSCRIBE_KEY)) {
-
-        fbq('track', 'Lead');
-        fbq('trackCustom', 'TelegramSubscribe', {
-            source: 'Landing Page',
-            platform: 'Telegram'
-        });
-
-        localStorage.setItem(SUBSCRIBE_KEY, "true");
-        console.log("✅ Subscribe tracked");
-    }
-});
 </script>
 
 </body>
